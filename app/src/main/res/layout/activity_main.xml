@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.db.williamchart.view.LineChartView
+            android:id="@+id/lineChart"
+            android:layout_width="0dp"
+            android:layout_height="200dp"
+            android:layout_marginTop="16dp"
+            app:chart_axis="none"
+            app:chart_lineColor="#64B5F6"
+            app:chart_lineThickness="3dp"
+            app:chart_smoothLine="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/kapijaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Kapija"
+            app:layout_constraintBaseline_toBaselineOf="@+id/kuhinjaButton"
+            app:layout_constraintEnd_toEndOf="@+id/sobaButton"
+            app:layout_constraintStart_toStartOf="@+id/sobaButton" />
+
+        <Button
+            android:id="@+id/kuhinjaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/kapijaButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Kuhinja"
+            app:layout_constraintEnd_toEndOf="@+id/garazaButton"
+            app:layout_constraintStart_toStartOf="@+id/garazaButton"
+            app:layout_constraintTop_toBottomOf="@+id/garazaButton" />
+
+        <Button
+            android:id="@+id/sobaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/kuhinjaButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginEnd="120dp"
+            android:text="Soba"
+            app:layout_constraintBaseline_toBaselineOf="@+id/garazaButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/garazaButton" />
+
+        <Button
+            android:id="@+id/garazaButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sobaButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="230dp"
+            android:text="Garaza"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lineChart" />
+
+        <Button
+            android:id="@+id/lightsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/securityButton"
+            android:layout_centerHorizontal="true"
+            android:text="Svjetla"
+            app:layout_constraintBaseline_toBaselineOf="@+id/kapijaButton"
+            app:layout_constraintEnd_toEndOf="@+id/musicButton"
+            app:layout_constraintStart_toStartOf="@+id/musicButton" />
+
+        <Button
+            android:id="@+id/securityButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="Sigurnost"
+            app:layout_constraintEnd_toEndOf="@+id/kuhinjaButton"
+            app:layout_constraintStart_toStartOf="@+id/kuhinjaButton"
+            app:layout_constraintTop_toBottomOf="@+id/kuhinjaButton" />
+
+        <Button
+            android:id="@+id/musicButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/securityButton"
+            android:layout_centerHorizontal="true"
+            android:text="Music"
+            app:layout_constraintBaseline_toBaselineOf="@+id/sobaButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sobaButton" />
+
+        <Button
+            android:id="@+id/doorLockButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Door Lock"
+            app:layout_constraintBaseline_toBaselineOf="@+id/curtainsButton"
+            app:layout_constraintEnd_toEndOf="@+id/lightsButton"
+            app:layout_constraintStart_toStartOf="@+id/lightsButton" />
+
+        <Button
+            android:id="@+id/curtainsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Curtains"
+            app:layout_constraintBaseline_toBaselineOf="@+id/securityButton"
+            app:layout_constraintEnd_toEndOf="@+id/kapijaButton"
+            app:layout_constraintStart_toStartOf="@+id/kapijaButton" />
+
+        <View
+            android:id="@+id/colorPreview"
+            android:layout_width="300dp"
+            android:layout_height="30dp"
+            android:layout_below="@+id/blueSeekBar"
+            android:layout_marginTop="12dp"
+            app:layout_constraintEnd_toEndOf="@+id/redSeekBar"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="@+id/redSeekBar"
+            app:layout_constraintTop_toBottomOf="@+id/redSeekBar" />
+
+        <SeekBar
+            android:id="@+id/redSeekBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="16dp"
+            android:max="255"
+            android:progress="0"
+            app:layout_constraintEnd_toEndOf="@+id/greenSeekBar"
+            app:layout_constraintStart_toStartOf="@+id/greenSeekBar"
+            app:layout_constraintTop_toBottomOf="@+id/greenSeekBar" />
+
+        <SeekBar
+            android:id="@+id/greenSeekBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/redSeekBar" android:layout_alignStart="@id/redSeekBar"
+            android:layout_alignEnd="@id/redSeekBar"
+            android:layout_marginTop="16dp"
+            android:max="255"
+            android:progress="0"
+            app:layout_constraintEnd_toEndOf="@+id/blueSeekBar"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/blueSeekBar"
+            app:layout_constraintTop_toBottomOf="@+id/blueSeekBar" />
+
+        <SeekBar
+            android:id="@+id/blueSeekBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/greenSeekBar"
+            android:layout_alignStart="@id/greenSeekBar"
+            android:layout_alignEnd="@id/greenSeekBar"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="32dp"
+            android:max="255"
+            android:progress="0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/securityButton" />
+
+        <SeekBar
+            android:id="@+id/temperatureSeekBar"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="@+id/colorPreview"
+            app:layout_constraintStart_toStartOf="@+id/colorPreview"
+            app:layout_constraintTop_toBottomOf="@+id/colorPreview" />
+
+        <TextView
+            android:id="@+id/temperatureTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/temperatureSeekBar"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="275dp"
+            android:text="0°C"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="@+id/temperatureSeekBar"
+            app:layout_constraintStart_toStartOf="@+id/temperatureSeekBar"
+            app:layout_constraintTop_toBottomOf="@+id/temperatureSeekBar" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
